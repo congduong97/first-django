@@ -5,4 +5,11 @@
 {% block content %}
 <h1>Post list</h1>
 <p>Move to about page <a href="/">Home</a></p>
+{% for post in posts  %}
+  <article>
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.date }}</p>
+    <p>{{ post.body }}</p>
+  </article>
+{% endfor %}
 {% endblock content %}
